@@ -1,0 +1,81 @@
+const json=`
+          {
+            "name" : "arjun",
+            "age" : 23 ,
+            "city" : "Pune"
+          }
+          `;
+          //Parse a JSON into a Js Object
+          const data = JSON.parse(json);
+          console.log(data)
+          // parse a json object into a string by using JSON.stringify
+          const vari = JSON.stringify(data);
+
+          console.log(vari);
+
+          // using for- in loop to iterate over object
+
+          console.log("Using for-in loop:");
+          for(let key in data){
+            console.log(`${key}: ${data[key]}`);
+
+          }
+
+          // using for-of loop with Object.entries() to iterate over object properties
+          console.log("\n Using for-of loop:");
+          for(let [key, value] of Object.entries(data)){
+            console.log(`${key}: ${value}`);
+          }
+
+          // using forEach method to iterate 
+          console.log("\n Using forEach method:");
+          Object.entries(data).forEach(([key, value]) => {
+            console.log(`${key} : ${value}`);
+          });
+
+
+
+        console.log("Resume in JSON format >>")
+
+const Resume =`{
+ "name":"Arjun Cheke",
+ "age": 23,
+ "email" : "arjuncheke2@gmail.com",
+ "phone" : "+91 8007430579"
+ "address" : "301A Lane A5,charavad vasti ,vadgaon(bk),Pune",
+ "education":[{
+   "degree":"Bachelor of Engineering",
+   "College":"Sinhgad College Of Engineering Vadgaon(bk)",
+   "university":"Savitribai Phule Pune University",
+   "Year":"2022"
+ },
+ {
+   "degree":"High School",
+   "College":"Samarth Junior College Of Science,Jafrabad",
+   "university":" Augbd University",
+   "Year":"2018"
+
+ },
+{
+   "degree":"SSC",
+   "College":"Mahatma Phule Vidyalay Shegaon",
+   "university":"Amaravati University",
+   "Year":"2016"
+}
+],
+"Hobbies":["Cricket",
+     "Gym",
+     "Travelling"
+   ],
+   "Skills":[
+       "JavaScript",
+       "Html",
+       "CSS",
+       "Java",
+       "C"
+   ]
+
+}
+`;
+
+const data = JSON.parse(Resume)
